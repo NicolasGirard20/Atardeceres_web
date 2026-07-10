@@ -381,6 +381,16 @@
   .bg-charcoal { background-color: var(--charcoal); }
   .bg-terracotta-light { background-color: var(--terracotta-light); }
   .bg-warm-sand-input { background-color: #f5efe3; }
+
+  .testimonial-nav-button {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-nav-button {
+      display: flex;
+    }
+  }
 }
 
 /* Responsive typography */

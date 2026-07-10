@@ -121,14 +121,14 @@ export default function Testimonials() {
           {/* Navigation Arrows */}
           <button
             onClick={goPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 flex items-center justify-center text-deep-olive hover:bg-cream transition-colors hidden md:flex"
+            className="testimonial-nav-button absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 items-center justify-center text-deep-olive hover:bg-cream transition-colors"
             aria-label="Reseña anterior"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={goNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 flex items-center justify-center text-deep-olive hover:bg-cream transition-colors hidden md:flex"
+            className="testimonial-nav-button absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 items-center justify-center text-deep-olive hover:bg-cream transition-colors"
             aria-label="Reseña siguiente"
           >
             <ChevronRight size={20} />
