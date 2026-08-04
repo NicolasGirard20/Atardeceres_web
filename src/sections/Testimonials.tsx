@@ -42,7 +42,7 @@ export default function Testimonials() {
   }, [isPaused, goNext]);
 
   return (
-    <section className="bg-warm-sand py-[72px] md:py-[120px] overflow-hidden">
+    <section id="testimonials" className="bg-warm-sand py-[72px] md:py-[120px] overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div className="text-center mb-10 md:mb-14">
@@ -87,7 +87,7 @@ export default function Testimonials() {
                     {/* Quote */}
                     <div className="relative mb-6">
                       <span
-                        className="absolute -top-4 -left-2 font-display text-[60px] leading-none opacity-30"
+                        className="absolute -top-4 -left-2 md:-top-4 md:-left-2 font-display text-[48px] md:text-[60px] leading-none opacity-30"
                         style={{ color: 'var(--terracotta)' }}
                       >
                         "
@@ -141,8 +141,8 @@ export default function Testimonials() {
                 key={index}
                 onClick={() => setCurrent(index)}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === current
-                    ? 'w-8'
-                    : 'hover:opacity-70'
+                  ? 'w-8'
+                  : 'hover:opacity-70'
                   }`}
                 style={{
                   backgroundColor:

@@ -5,9 +5,10 @@ const navLinks = [
   { label: 'Nuestra Historia', href: '#historia' },
   { label: 'Galería', href: '#galeria' },
   { label: 'Habitaciones', href: '#habitaciones' },
-  { label: 'Experiencias', href: '#experiencias' },
+  { label: 'Experiencias', href: '#testimonials' },
   { label: 'Ubicación', href: '#ubicacion' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Reserva Ahora', href: '#contacto' },
+
 ];
 
 export default function Navigation() {
@@ -52,11 +53,10 @@ export default function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 h-[72px] md:h-[72px] transition-all duration-400 ${
-          scrolled
-            ? 'bg-[var(--cream)]/95 backdrop-blur-[12px] border-b border-[var(--stone)]/20 shadow-sm'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 h-[72px] md:h-[72px] transition-all duration-400 ${scrolled
+          ? 'bg-[var(--cream)]/95 backdrop-blur-[12px] border-b border-[var(--stone)]/20 shadow-sm'
+          : 'bg-transparent'
+          }`}
       >
         <div className="max-w-[1280px] mx-auto px-5 md:px-8 h-full flex items-center justify-between">
           {/* Logo */}
@@ -66,9 +66,8 @@ export default function Navigation() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`font-display text-xl font-semibold transition-colors duration-300 ${
-              scrolled ? 'text-deep-olive' : 'text-cream'
-            }`}
+            className={`font-display text-xl font-semibold transition-colors duration-300 ${scrolled ? 'text-deep-olive' : 'text-cream'
+              }`}
           >
             ATARDECERES
           </a>
@@ -80,13 +79,12 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`nav-link text-[14px] font-medium transition-colors duration-200 ${
-                  scrolled
-                    ? activeSection === link.href
-                      ? 'text-deep-olive'
-                      : 'text-olive-muted hover:text-deep-olive'
-                    : 'text-white font-bold hover:text-white'
-                }`}
+                className={`nav-link text-[14px] font-medium transition-colors duration-200 ${scrolled
+                  ? activeSection === link.href
+                    ? 'text-deep-olive'
+                    : 'text-olive-muted hover:text-deep-olive'
+                  : 'text-cream font-semibold hover:text-cream/80 drop-shadow-sm'
+                  }`}
               >
                 {link.label}
               </a>
@@ -114,9 +112,8 @@ export default function Navigation() {
 
           {/* Mobile hamburger */}
           <button
-            className={`lg:hidden p-2 transition-colors ${
-              scrolled ? 'text-deep-olive' : 'text-cream'
-            }`}
+            className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-deep-olive' : 'text-cream'
+              }`}
             onClick={() => setMobileOpen(true)}
             aria-label="Abrir menú"
           >
@@ -147,13 +144,7 @@ export default function Navigation() {
             {link.label}
           </a>
         ))}
-        <a
-          href="#contacto"
-          onClick={(e) => handleNavClick(e, '#contacto')}
-          className="btn-primary mt-4"
-        >
-          Reservar Ahora
-        </a>
+
       </div>
     </>
   );

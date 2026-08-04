@@ -6,14 +6,14 @@ export default function Video() {
   const videoId = 'aME0G3ZMYxk';
 
   return (
-    <section className="bg-charcoal py-[72px] md:py-[120px]">
+    <section className="bg-white py-[72px] md:py-[120px]">
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div className="text-center mb-10 md:mb-14">
-          <p className="scroll-reveal text-golden-wheat sm:font-bold text-[13px] uppercase tracking-[2px] font-medium mb-4">
+          <p className="scroll-reveal text-terracotta sm:font-bold text-[13px] uppercase tracking-[2px] font-medium mb-4">
             Un Lugar especial
           </p>
-          <h2 className="scroll-reveal section-title font-display text-cream">
+          <h2 className="scroll-reveal section-title font-display text-deep-olive">
             Sentí la Magia de los Atardeceres Entrerianos
           </h2>
         </div>
@@ -56,9 +56,7 @@ export default function Video() {
         </div>
 
         {/* Description */}
-        <p className="scroll-reveal body-text text-white/70 text-center font-semibold max-w-[640px] mx-auto mt-8">
-          A tan solo 1 km del centro, Atardeceres ofrece un refugio de tranquilidad y confort, rodeado de las mejores atardeceres de Libertador San Martín.
-        </p>
+
       </div>
     </section>
   );

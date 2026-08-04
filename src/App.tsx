@@ -5,7 +5,6 @@ import OurStory from './sections/OurStory';
 import Gallery from './sections/Gallery';
 import Rooms from './sections/Rooms';
 import Video from './sections/Video';
-// import Experiences from './sections/Experiences';
 import Testimonials from './sections/Testimonials';
 import Location from './sections/Location';
 import Contact from './sections/Contact';
@@ -23,7 +22,7 @@ export default function App() {
         <Gallery />
         <Rooms />
         <Video />
-        {/* <Experiences /> */}
+
         <Testimonials />
         <Location />
         <Contact />

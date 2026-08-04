@@ -1,19 +1,21 @@
-import { Users, Wifi, Flame, Bath, Tv } from 'lucide-react';
+import { Users, Wifi, Flame, Bath, Tv, Refrigerator, AirVent } from 'lucide-react';
 
 const rooms = [
   {
     name: 'Suite Familiar',
     image: '/img-bedroom-suite.jpg',
-    capacity: '3 huéspedes',
+    capacity: '4/5 huéspedes',
     amenities: [
       { icon: Wifi, label: 'WiFi' },
       { icon: Flame, label: 'Calefacción' },
       { icon: Bath, label: 'Baño Privado' },
       { icon: Tv, label: 'Tv' },
+      { icon: Refrigerator, label: 'Heladera' },
+      { icon: AirVent, label: 'Aire Acondicionado' },
     ],
     description:
       'Suite familiar con todas las comodidades para disfrutar de un descanso perfecto. Cuenta con una cama matrimonial y una cama individual, baño privado y vistas panorámicas únicas de Libertador San Martín.',
-    price: '$45.000',
+
   },
   // {
   //   name: 'Habitación del Bosque',
@@ -104,15 +106,7 @@ export default function Rooms() {
                 </p>
 
                 <div className="flex items-end justify-between">
-                  <div>
-                    <span
-                      className="text-[28px] font-semibold leading-none"
-                      style={{ color: 'var(--terracotta)' }}
-                    >
-                      {room.price}
-                    </span>
-                    <span className="text-stone text-[13px] ml-1">/noche ARS</span>
-                  </div>
+
                   <a
                     href="#contacto"
                     onClick={(e) => {

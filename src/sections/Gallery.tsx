@@ -47,16 +47,16 @@ export default function Gallery() {
   }, [lightboxOpen, goNext, goPrev]);
 
   return (
-    <section id="galeria" className="bg-charcoal py-[26px] md:py-[48px]">
+    <section id="galeria" className="bg-white/70 py-[26px] md:py-[48px]">
       {/* Header */}
       <div className="max-w-[1280px] mx-auto px-5 md:px-8 mb-10 md:mb-14">
-        <p className="scroll-reveal text-golden-wheat text-[13px] uppercase tracking-[2px] font-medium mb-4 text-center">
+        <p className="scroll-reveal text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4 text-center">
           Galería
         </p>
-        <h2 className="scroll-reveal section-title font-display text-cream mb-4 text-center">
+        <h2 className="scroll-reveal section-title font-display text-deep-olive mb-4 text-center">
           Cada Rincón, una Postal
         </h2>
-        <p className="scroll-reveal body-text text-white/60 text-center max-w-[600px] mx-auto">
+        <p className="scroll-reveal body-text text-olive-muted text-center max-w-[600px] mx-auto">
           Así es el hospedaje Atardeceres, un lugar donde cada detalle está pensado para que tu estadía sea inolvidable.
         </p>
       </div>
@@ -156,10 +156,10 @@ export default function Gallery() {
             src={galleryImages[currentIndex].src}
             alt={galleryImages[currentIndex].alt}
           />
-          <p className="text-cream/80 text-sm mt-4 max-w-[600px] text-center px-4">
+          <p className="text-white text-md mt-4 max-w-[600px] text-center px-4">
             {galleryImages[currentIndex].alt}
           </p>
-          <p className="text-cream/50 text-xs mt-2">
+          <p className="text-white text-md mt-2">
             {currentIndex + 1} / {galleryImages.length}
           </p>
         </div>

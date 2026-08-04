@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search,  CalendarDays } from 'lucide-react';
+import { Search, CalendarDays } from 'lucide-react';
 
 export default function Hero() {
 
@@ -15,12 +15,12 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative w-full min-h-[100dvh] flex items-end md:items-center overflow-hidden">
+      <section className="relative w-full min-h-[100dvh] flex items-end overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src="/img-hero-lodge.jpeg"
-            alt="La Casona del Valle - Lodge en las Sierras de Córdoba"
+            alt="Atardeceres"
             className="w-full h-full object-cover"
             loading="eager"
           />
@@ -35,27 +35,18 @@ export default function Hero() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-8 pb-[180px] md:pb-0 md:pt-[15vh]">
+        <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 md:px-8 pb-12 md:pb-16">
           <div className="max-w-[640px]">
-            <p className="hero-eyebrow text-black/90  text-sm md:text-base font-body uppercase tracking-[3px] font-bold mb-4">
+            <p className="hero-eyebrow text-white text-sm md:text-base font-body uppercase tracking-[3px] font-bold mb-4">
               Bienvenidos a
             </p>
-            <h1 className="hero-headline-anim hero-headline  font-bold text-black mb-4 md:mb-6">
+            <h1 className="hero-headline-anim hero-headline font-bold text-cream mb-4 md:mb-6">
               Atardeceres
             </h1>
-            <p className="hero-subheadline subsection-title font-semibold text-black italic mb-6 md:mb-8 max-w-[520px]">
+            <p className="hero-subheadline subsection-title font-semibold text-white/90 italic mb-6 md:mb-8 max-w-[520px]">
               Donde el tiempo se detiene en Libertador San Martín
             </p>
-            <a
-              href="#historia"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#historia')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="hero-cta btn-cream bg-white/80 inline-flex items-center gap-2 text-deep-olive transition-colors duration-700 ease-in-out hover:bg-deep-olive hover:text-white"
-            >
-              Conocé Nuestra Historia
-            </a>
+
           </div>
         </div>
 
@@ -64,11 +55,10 @@ export default function Hero() {
 
       {/* Floating Mini Booking Bar (appears after scrolling past hero) */}
       <div
-        className={`fixed top-20 right-6 z-40 hidden lg:flex items-center gap-3 bg-white rounded-full shadow-lg px-5 py-3 transition-all duration-400 ${
-          showFloating
-            ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-0 -translate-y-4 pointer-events-none'
-        }`}
+        className={`fixed top-20 right-6 z-40 hidden lg:flex items-center gap-3 bg-white rounded-full shadow-lg px-5 py-3 transition-all duration-400 ${showFloating
+          ? 'opacity-100 translate-y-0 pointer-events-auto'
+          : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
       >
         <CalendarDays size={18} className="text-terracotta" />
         <span className="text-sm font-medium text-deep-olive">Reservar</span>

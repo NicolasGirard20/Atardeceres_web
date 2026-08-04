@@ -1,10 +1,9 @@
 
-import { Phone, Mail, Clock, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Clock, MapPin, MessageCircle } from 'lucide-react';
 
 const contactInfo = [
   { icon: Phone, text: '+54 9 343 429-6075' },
-  { icon: Mail, text: 'hola@casonadelvalle.com.ar' },
-  { icon: Clock, text: 'Check-in: 14:00 · Check-out: 11:00' },
+  { icon: Clock, text: 'Check-in: 15:00 · Check-out: 11:00' },
   { icon: MapPin, text: 'Luís Ernst, Libertador San Martín, Entre Ríos' },
 ];
 
@@ -17,21 +16,17 @@ export default function Contact() {
 
 
   return (
-    <section id="contacto" className="bg-charcoal py-[72px] md:py-[120px]">
+    <section id="contacto" className="bg-white/85 py-[72px] md:py-[120px]" >
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* Left Column - 45% */}
           <div className="lg:w-[45%] scroll-reveal-left">
-            <p className="text-golden-wheat text-[13px] uppercase tracking-[2px] font-medium mb-4">
+            <p className="text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4">
               Reservá Tu Estadía
             </p>
-            <h2 className="section-title font-display text-cream mb-5">
-              Los Atardeceres te espera
+            <h2 className="section-title font-display text-deep-olive mb-5">
+              Atardeceres te espera
             </h2>
-            <p className="body-text text-white/50 mb-8">
-              Completá el formulario y te contactaremos en menos de 24 horas para confirmar tu
-              reserva.
-            </p>
 
             {/* WhatsApp CTA */}
             <a
@@ -50,9 +45,9 @@ export default function Contact() {
                 <div key={item.text} className="flex items-start gap-3">
                   <item.icon
                     size={18}
-                    className="text-golden-wheat mt-0.5 shrink-0"
+                    className="text-terracotta mt-0.5 shrink-0"
                   />
-                  <span className="body-text text-white/50">{item.text}</span>
+                  <span className="body-text text-olive-muted">{item.text}</span>
                 </div>
               ))}
             </div>
