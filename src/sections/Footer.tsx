@@ -1,4 +1,3 @@
-import { Instagram, Facebook, MessageCircle } from 'lucide-react';
 
 const navLinks = [
   { label: 'Nuestra Historia', href: '#historia' },
