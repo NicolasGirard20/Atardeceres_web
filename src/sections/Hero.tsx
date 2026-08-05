@@ -1,17 +1,4 @@
-import { useState, useEffect } from 'react';
-import { Search, CalendarDays } from 'lucide-react';
-
 export default function Hero() {
-
-  const [showFloating, setShowFloating] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowFloating(window.scrollY > window.innerHeight * 0.7);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <>
