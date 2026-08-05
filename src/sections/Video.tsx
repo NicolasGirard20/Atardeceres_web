@@ -6,11 +6,11 @@ export default function Video() {
   const videoId = 'aME0G3ZMYxk';
 
   return (
-    <section className="bg-white py-[72px] md:py-[120px]">
+    <section id="video" className="bg-white py-[72px] md:py-[120px]">
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div className="text-center mb-10 md:mb-14">
-          <p className="scroll-reveal text-terracotta sm:font-bold text-[13px] uppercase tracking-[2px] font-medium mb-4">
+          <p className="scroll-reveal text-terracotta text-base uppercase tracking-[2px] font-bold mb-4">
             Un Lugar especial
           </p>
           <h2 className="scroll-reveal section-title font-display text-deep-olive">

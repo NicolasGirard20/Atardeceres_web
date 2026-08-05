@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, CalendarDays } from 'lucide-react';
 
 const navLinks = [
   { label: 'Nuestra Historia', href: '#historia' },
   { label: 'Galería', href: '#galeria' },
-  { label: 'Habitaciones', href: '#habitaciones' },
+  { label: 'Habitación', href: '#habitaciones' },
+  { label: 'Video', href: '#video' },
   { label: 'Experiencias', href: '#testimonials' },
   { label: 'Ubicación', href: '#ubicacion' },
-  { label: 'Reserva Ahora', href: '#contacto' },
-
 ];
 
 export default function Navigation() {
@@ -92,23 +91,14 @@ export default function Navigation() {
           </div>
 
           {/* Desktop CTA */}
-          {/* <a
+          <a
             href="#contacto"
             onClick={(e) => handleNavClick(e, '#contacto')}
-            className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-250 hover:-translate-y-px"
-            style={{
-              backgroundColor: 'var(--terracotta)',
-              color: 'var(--white)',
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.backgroundColor = 'var(--terracotta-hover)')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.backgroundColor = 'var(--terracotta)')
-            }
+            className="hidden lg:inline-flex items-center gap-2.5 px-5 py-2 rounded-full text-sm font-bold bg-white text-deep-olive shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
           >
-            Reservar
-          </a> */}
+            <CalendarDays size={18} className="text-terracotta" />
+            <span>Reserva Ahora</span>
+          </a>
 
           {/* Mobile hamburger */}
           <button
@@ -144,7 +134,14 @@ export default function Navigation() {
             {link.label}
           </a>
         ))}
-
+        <a
+          href="#contacto"
+          onClick={(e) => handleNavClick(e, '#contacto')}
+          className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-base font-bold bg-white text-deep-olive shadow-md transition-all duration-300 active:scale-95 cursor-pointer mt-4"
+        >
+          <CalendarDays size={20} className="text-terracotta" />
+          <span>Reserva Ahora</span>
+        </a>
       </div>
     </>
   );

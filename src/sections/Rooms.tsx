@@ -54,7 +54,7 @@ export default function Rooms() {
       <div className="max-w-[1280px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div className="text-center mb-10 md:mb-14">
-          <p className="scroll-reveal text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4">
+          <p className="scroll-reveal text-terracotta text-base uppercase tracking-[2px] font-bold mb-4">
             Servicios
           </p>
           <h2 className="scroll-reveal section-title font-display text-deep-olive">
@@ -101,7 +101,7 @@ export default function Rooms() {
                   ))}
                 </div>
 
-                <p className="text-stone text-[13px] leading-relaxed mb-5 line-clamp-2">
+                <p className="text-stone text-[13px] leading-relaxed mb-5 line-clamp-none md:line-clamp-2">
                   {room.description}
                 </p>
 
@@ -113,9 +113,9 @@ export default function Rooms() {
                       e.preventDefault();
                       document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-terracotta text-[13px] font-medium hover:underline"
+                    className="inline-flex text-terracotta text-base font-bold px-4 py-2 -ml-4 rounded-lg transition-all duration-300 hover:bg-terracotta hover:text-white active:scale-95"
                   >
-                    Ver Detalles →
+                    Consultar disponibilidad →
                   </a>
                 </div>
               </div>

@@ -5,7 +5,7 @@ export default function OurStory() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left Column - 55% */}
           <div className="lg:w-[55%] scroll-reveal-left">
-            <p className="text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4">
+            <p className="text-terracotta text-base uppercase tracking-[2px] font-bold mb-4">
               Nuestra Historia
             </p>
             <h2 className="section-title font-display text-deep-olive mb-6 md:mb-8">

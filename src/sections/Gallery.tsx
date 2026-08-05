@@ -50,14 +50,15 @@ export default function Gallery() {
     <section id="galeria" className="bg-white/70 py-[26px] md:py-[48px]">
       {/* Header */}
       <div className="max-w-[1280px] mx-auto px-5 md:px-8 mb-10 md:mb-14">
-        <p className="scroll-reveal text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4 text-center">
+        <p className="scroll-reveal text-terracotta text-base uppercase tracking-[2px] font-bold mb-4 text-center">
           Galería
         </p>
         <h2 className="scroll-reveal section-title font-display text-deep-olive mb-4 text-center">
           Cada Rincón, una Postal
         </h2>
         <p className="scroll-reveal body-text text-olive-muted text-center max-w-[600px] mx-auto">
-          Así es el hospedaje Atardeceres, un lugar donde cada detalle está pensado para que tu estadía sea inolvidable.
+          Así es el hospedaje Atardeceres, un lugar donde cada detalle está pensado para que tu estadía sea inolvidable. Tocá o hacé clic en las fotos para explorarlas en detalle.
+
         </p>
       </div>
 

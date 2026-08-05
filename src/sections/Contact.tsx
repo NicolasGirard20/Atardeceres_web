@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* Left Column - 45% */}
           <div className="lg:w-[45%] scroll-reveal-left">
-            <p className="text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4">
+            <p className="text-terracotta text-base uppercase tracking-[2px] font-bold mb-4">
               Reservá Tu Estadía
             </p>
             <h2 className="section-title font-display text-deep-olive mb-5">

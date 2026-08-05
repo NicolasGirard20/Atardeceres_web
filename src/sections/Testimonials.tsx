@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const reviews = [
@@ -26,6 +26,14 @@ const reviews = [
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [containerHeight, setContainerHeight] = useState<number | undefined>(undefined);
+
+  const updateHeight = useCallback(() => {
+    if (slideRefs.current[current]) {
+      setContainerHeight(slideRefs.current[current]?.offsetHeight);
+    }
+  }, [current]);
 
   const goNext = useCallback(() => {
     setCurrent((prev) => (prev + 1) % reviews.length);
@@ -36,17 +44,23 @@ export default function Testimonials() {
   }, []);
 
   useEffect(() => {
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, [updateHeight]);
+
+  useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(goNext, 5000);
     return () => clearInterval(interval);
   }, [isPaused, goNext]);
 
   return (
-    <section id="testimonials" className="bg-warm-sand py-[72px] md:py-[120px] overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-5 md:px-8">
+    <section id="testimonials" className="bg-warm-sand ">
+      <div className=" py-[56px] md:py-[72px] overflow-hidden max-w-[1280px] mx-auto px-5 md:px-8">
         {/* Header */}
         <div className="text-center mb-10 md:mb-14">
-          <p className="scroll-reveal text-terracotta text-[13px] uppercase tracking-[2px] font-medium mb-4">
+          <p className="scroll-reveal text-terracotta text-base uppercase tracking-[2px] font-bold mb-4">
             Lo que Dicen Nuestros Huéspedes
           </p>
           <h2 className="scroll-reveal section-title font-display text-deep-olive">
@@ -61,17 +75,38 @@ export default function Testimonials() {
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Slides container */}
-          <div className="overflow-hidden">
+          <div
+            className="overflow-hidden transition-[height] duration-[500ms] ease-in-out"
+            style={{ height: containerHeight ? `${containerHeight}px` : 'auto' }}
+          >
             <div
-              className="flex transition-transform duration-[600ms] ease-in-out"
+              className="flex items-start transition-transform duration-[600ms] ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}
             >
               {reviews.map((review, index) => (
                 <div
                   key={index}
+                  ref={(el) => { slideRefs.current[index] = el; }}
                   className="w-full flex-shrink-0 px-0 md:px-[8%]"
                 >
-                  <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm max-w-[800px] mx-auto">
+                  <div className="bg-white rounded-xl p-8 md:p-10 shadow-sm max-w-[800px] mx-auto relative">
+                    {/* Mobile Navigation Arrows */}
+                    <div className="md:hidden absolute top-6 right-6 flex gap-2 z-10">
+                      <button
+                        onClick={goPrev}
+                        className="flex w-9 h-9 rounded-full bg-cream border border-[var(--stone)]/10 items-center justify-center text-deep-olive transition-colors"
+                        aria-label="Reseña anterior"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={goNext}
+                        className="flex w-9 h-9 rounded-full bg-cream border border-[var(--stone)]/10 items-center justify-center text-deep-olive transition-colors"
+                        aria-label="Reseña siguiente"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                    </div>
                     {/* Stars */}
                     <div className="flex gap-1 mb-5">
                       {[...Array(5)].map((_, i) => (
@@ -118,20 +153,20 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Desktop Navigation Arrows */}
           <button
             onClick={goPrev}
-            className="testimonial-nav-button absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 items-center justify-center text-deep-olive hover:bg-cream transition-colors"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 items-center justify-center text-deep-olive hover:bg-cream transition-colors z-10"
             aria-label="Reseña anterior"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={goNext}
-            className="testimonial-nav-button absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 items-center justify-center text-deep-olive hover:bg-cream transition-colors"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white border border-[var(--stone)]/20 items-center justify-center text-deep-olive hover:bg-cream transition-colors z-10"
             aria-label="Reseña siguiente"
           >
-            <ChevronRight size={20} />
+            <ChevronRight className="w-6 h-6" />
           </button>
 
           {/* Dot Indicators */}
