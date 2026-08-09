@@ -2,12 +2,12 @@ import { useState, useCallback, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const galleryImages = [
-  { src: '/img-hero-lodge.jpeg', alt: 'Vista exterior' },
-  { src: '/img-room-fireplace2.jpg', alt: 'Sala de estar con Televisor y sillones de cuero' },
-  { src: '/img-bathroom.jpeg', alt: 'Baño con azulejos y mobiliario de madera' },
-  { src: '/img-kitchen.jpeg', alt: 'Cocina con isla, amoblamiento de madera, horno y heladera' },
-  { src: '/img-bedroom-suite.jpg', alt: 'Cama individual y cama matrimonial' },
-  { src: '/img-outdoor.jpg', alt: 'Vista del atardecer' },
+  { src: '/img-hero-lodge.jpeg', alt: 'Vista exterior del hospedaje Atardeceres en Libertador San Martín, Entre Ríos' },
+  { src: '/img-room-fireplace2.jpg', alt: 'Sala de estar del hospedaje Atardeceres con televisor y sillones de cuero' },
+  { src: '/img-bathroom.jpeg', alt: 'Baño con azulejos y mobiliario de madera en el hospedaje Atardeceres' },
+  { src: '/img-kitchen.jpeg', alt: 'Cocina con isla, amoblamiento de madera y comodidades en hospedaje Atardeceres, Entre Ríos' },
+  { src: '/img-bedroom-suite.jpg', alt: 'Habitación con cama individual y cama matrimonial en hospedaje Atardeceres' },
+  { src: '/img-outdoor.jpg', alt: 'Vista del atardecer desde el hospedaje en Libertador San Martín, Entre Ríos' },
   // { src: '/img-dining-room.jpeg', alt: 'Comedor con mesa de madera y sillas' },
   // { src: '/img-living-room.jpeg', alt: 'Sala de estar con sillones y chimenea' },
 ];

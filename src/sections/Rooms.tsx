@@ -74,7 +74,7 @@ export default function Rooms() {
               <div className="h-[280px] overflow-hidden">
                 <img
                   src={room.image}
-                  alt={room.name}
+                  alt={`${room.name} en el hospedaje Atardeceres, Entre Ríos`}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

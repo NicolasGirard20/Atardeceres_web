@@ -25,7 +25,7 @@ export default function Video() {
               {/* Thumbnail overlay */}
               <img
                 src="/img-cabin-exterior.jpg"
-                alt="Vista de los Atardeceres"
+                alt="Vista exterior de las cabañas del hospedaje Atardeceres en Libertador San Martín, Entre Ríos"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

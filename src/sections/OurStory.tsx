@@ -12,10 +12,13 @@ export default function OurStory() {
               Un Refugio con Historias
             </h2>
             <p className="body-large text-olive-muted mb-5">
-              Atardeceres es más que un lugar para hospedarse; es un refugio donde cada rincón cuenta una historia. Desde la arquitectura que respeta la esencia de la región, hasta los detalles cuidadosamente seleccionados, cada elemento está pensado para ofrecer una experiencia única y memorable.
+              Atardeceres es más que un lugar para hospedarse; es un refugio donde cada rincón cuenta una historia. Desde la arquitectura que respeta la esencia de la región, hasta los detalles cuidadosamente seleccionados, cada elemento está pensado para ofrecer una experiencia única y memorable en su hospedaje.
+            </p>
+            <p className="body-text text-olive-muted mb-5">
+              Aquí no hay prisa. El único horario que importa es el del atardecer, cuando el cielo se tiñe de colores cálidos y la naturaleza nos recuerda la belleza de lo simple. Cada visita es una oportunidad para desconectar, reconectar y crear recuerdos que perdurarán en el tiempo, disfrutando de todas las comodidades de nuestro hospedaje.
             </p>
             <p className="body-text text-olive-muted mb-8">
-              Aquí no hay prisa. El único horario que importa es el del atardecer, cuando el cielo se tiñe de colores cálidos y la naturaleza nos recuerda la belleza de lo simple. Cada visita es una oportunidad para desconectar, reconectar y crear recuerdos que perdurarán en el tiempo.
+              Ubicados estratégicamente en Libertador San Martín, Entre Ríos, ofrecemos el punto de partida ideal para quienes visitan la Universidad Adventista del Plata (UAP) o el Sanatorio Adventista. Además, nuestra ubicación privilegiada permite disfrutar del turismo regional, conectando con la tranquilidad y naturaleza que caracterizan a Entre Ríos.
             </p>
 
             {/* Signature Block */}
@@ -52,7 +55,7 @@ export default function OurStory() {
             <div className="rounded-xl overflow-hidden mb-8">
               <img
                 src="/img-living-room.jpg"
-                alt="Interior acogedor de La Casona del Valle con chimenea de piedra y sillones de cuero"
+                alt="Habitación y comodidades del hospedaje Atardeceres en Libertador San Martín, Entre Ríos"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
