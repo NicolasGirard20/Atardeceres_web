@@ -2,8 +2,8 @@ import { MapPin, Car } from 'lucide-react';
 
 const infoPills = [
   { icon: MapPin, text: 'LSM, Entre Ríos' },
-  { icon: Car, text: '1,5 km del Sanatorio Adventista' },
-  { icon: Car, text: '1,3 km de la Universidad Adventista del Plata' }
+  { icon: Car, text: '1,5 km del Sanatorio Adventista del Plata' },
+  { icon: Car, text: '1,3 km de la Universidad Adventista del Plata (UAP)' }
 
 ];
 
@@ -17,7 +17,7 @@ export default function Location() {
             Ubicación
           </p>
           <h2 className="scroll-reveal section-title font-display text-deep-olive mb-5">
-            Libertador San martín, Entre Ríos
+            Libertador San Martín, Entre Ríos
           </h2>
           <p className="scroll-reveal body-text text-black/70 mb-8">
             Nos encontramos en Libertador San Martín, Entre Ríos, a pocas cuadras del centro de la ciudad y rodeados de las mejores vistas de la región. Nuestro alojamiento ofrece un refugio de tranquilidad y confort, ideal para disfrutar de la naturaleza y relajarse en un entorno único.

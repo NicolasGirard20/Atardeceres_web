@@ -55,7 +55,7 @@ export default function OurStory() {
             <div className="rounded-xl overflow-hidden mb-8">
               <img
                 src="/img-living-room.jpg"
-                alt="Habitación y comodidades del hospedaje Atardeceres en Libertador San Martín, Entre Ríos"
+                alt="Interior acogedor y comodidades del hospedaje Atardeceres en Libertador San Martín, Entre Ríos"
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />

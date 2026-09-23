@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="absolute inset-0">
           <img
             src="/img-hero-lodge.jpeg"
-            alt="Exterior del hospedaje Atardeceres en Libertador San Martín, Entre Ríos"
+            alt="Exterior del hospedaje Atardeceres con vistas al atardecer en Libertador San Martín, Entre Ríos"
             className="w-full h-full object-cover"
             loading="eager"
           />
