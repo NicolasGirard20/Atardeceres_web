@@ -14,7 +14,7 @@ const rooms = [
       { icon: AirVent, label: 'Aire Acondicionado' },
     ],
     description:
-      'Suite familiar con todas las comodidades para disfrutar de un descanso perfecto. Cuenta con una cama matrimonial y una cama individual, baño privado y vistas panorámicas únicas de Libertador San Martín.',
+      'Suite familiar disponible para alquiler por día con todas las comodidades para disfrutar de un descanso perfecto. Cuenta con una cama matrimonial y una cama individual, baño privado y vistas panorámicas únicas de Libertador San Martín.',
 
   },
   // {
@@ -74,7 +74,7 @@ export default function Rooms() {
               <div className="h-[280px] overflow-hidden">
                 <img
                   src={room.image}
-                  alt={`${room.name} en el hospedaje Atardeceres en Libertador San Martín, Entre Ríos`}
+                  alt={`${room.name} en alquiler por día en hospedaje Atardeceres, Libertador San Martín`}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

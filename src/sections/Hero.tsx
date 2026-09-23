@@ -28,7 +28,7 @@ export default function Hero() {
               Bienvenidos a
             </p>
             <h1 className="hero-headline-anim hero-headline font-bold text-cream mb-4 md:mb-6 text-[4rem] leading-[1.1] md:text-[5rem]">
-              Atardeceres <span className="block text-2xl md:text-3xl font-normal mt-2">— Hospedaje en Libertador San Martín, Entre Ríos</span>
+              Atardeceres <span className="block text-2xl md:text-3xl font-normal mt-2">— Hospedaje y Alquiler por Día en Libertador San Martín</span>
             </h1>
             <p className="hero-subheadline subsection-title font-semibold text-white/90 italic mb-6 md:mb-8 max-w-[520px]">
               Donde el tiempo se detiene en Libertador San Martín
