@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 
 export default function Video() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = 'aME0G3ZMYxk';
+  const videoId = 'RanQc88vGgI';
 
   return (
     <section id="video" className="bg-white py-[72px] md:py-[120px]">
